@@ -752,6 +752,8 @@ class SenseNovaU1Model(nn.Module):
 
 
 class SenseNovaU1ForCausalLM(nn.Module):
+    _repeated_blocks = ["SenseNovaU1DecoderLayer"]
+
     def __init__(self, config, quant_config=None, prefix: str = ""):
         super().__init__()
         self.config = config
